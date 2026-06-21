@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Force-enable the Nitro deploy plugin and target Netlify Functions.
+  // Outside a Lovable sandbox the wrapper skips Nitro entirely (a Vite-only build with
+  // no server), which is why every route 404s once deployed. Pinning the preset makes
+  // `vite build` emit the Netlify server function + redirects into `dist`.
+  nitro: { preset: "netlify" },
 });
