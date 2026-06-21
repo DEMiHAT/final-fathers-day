@@ -4,6 +4,8 @@ import { GlassButton, NextFab, Particles, RevealLines, SectionShell } from "./pr
 import photo1 from "@/assets/photo1.jpg";
 import photo2 from "@/assets/photo2.jpg";
 import photo3 from "@/assets/photo3.jpg";
+import rollsRoyceLogo from "@/assets/rolls-royce.svg";
+import landRoverLogo from "@/assets/land-rover.svg";
 
 /* 0 — Opening */
 export function Opening({ next }: { next: () => void }) {
@@ -608,30 +610,20 @@ export function ThingsYouLove({ next }: { next: () => void }) {
 
 function RRIcon() {
   return (
-    <svg viewBox="0 0 120 60" className="w-32 h-16 text-white/80">
-      <g fill="currentColor">
-        <text x="60" y="38" textAnchor="middle" fontFamily="serif" fontSize="36" fontWeight="700" letterSpacing="-2">
-          RR
-        </text>
-        <rect x="20" y="46" width="80" height="2" />
-        <rect x="30" y="50" width="60" height="1" opacity="0.6" />
-      </g>
-    </svg>
+    <img
+      src={rollsRoyceLogo}
+      alt="Rolls-Royce Logo"
+      className="w-20 h-20 object-contain brightness-0 invert opacity-80"
+    />
   );
 }
 function DefenderIcon() {
   return (
-    <svg viewBox="0 0 120 60" className="w-32 h-16 text-white/80">
-      <g fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="20" y="20" width="80" height="25" rx="3" />
-        <rect x="28" y="14" width="64" height="8" rx="2" />
-        <circle cx="36" cy="48" r="6" />
-        <circle cx="84" cy="48" r="6" />
-        <line x1="42" y1="20" x2="42" y2="45" />
-        <line x1="60" y1="20" x2="60" y2="45" />
-        <line x1="78" y1="20" x2="78" y2="45" />
-      </g>
-    </svg>
+    <img
+      src={landRoverLogo}
+      alt="Land Rover Logo"
+      className="w-32 h-12 object-contain brightness-0 invert opacity-80"
+    />
   );
 }
 
