@@ -1,0 +1,63 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-bg: #0A0A0A;
+  --color-fg: #FFFFFF;
+  --color-accent: #FF5E7D;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+}
+
+html, body, #root {
+  background: #0A0A0A;
+  color: #FFFFFF;
+  min-height: 100%;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+body {
+  background:
+    radial-gradient(60% 40% at 50% 0%, rgba(255, 94, 125, 0.18), transparent 70%),
+    radial-gradient(50% 40% at 90% 80%, rgba(120, 140, 255, 0.12), transparent 70%),
+    radial-gradient(40% 30% at 10% 70%, rgba(255, 200, 220, 0.08), transparent 70%),
+    #0A0A0A;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(24px) saturate(160%);
+    border-radius: 24px;
+  }
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(32px) saturate(180%);
+    border-radius: 28px;
+  }
+  .glass-soft {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(18px) saturate(140%);
+    border-radius: 20px;
+  }
+  .text-accent { color: #FF5E7D; }
+  .font-display { font-family: var(--font-display); }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
