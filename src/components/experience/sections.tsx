@@ -6,6 +6,8 @@ import photo2 from "@/assets/photo2.jpg";
 import photo3 from "@/assets/photo3.jpg";
 import rollsRoyceLogo from "@/assets/rolls-royce.svg";
 import landRoverLogo from "@/assets/land-rover.svg";
+import rrGhostImg from "@/assets/rr_ghost.jpg";
+import defenderCarImg from "@/assets/defender_car.jpg";
 
 /* 0 — Opening */
 export function Opening({ next }: { next: () => void }) {
@@ -536,16 +538,32 @@ export function ThingsYouLove({ next }: { next: () => void }) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="glass-strong p-7 w-full max-w-sm"
+              className="glass-strong overflow-hidden w-full max-w-sm flex flex-col rounded-2xl border border-white/10"
             >
-              <RRIcon />
-              <p className="text-white/50 text-xs uppercase tracking-widest mt-4">Card · 01</p>
-              <p className="font-display text-3xl text-white mt-1">Rolls-Royce</p>
-              <div className="mt-4 space-y-2 text-white/85 text-[15px] leading-relaxed">
-                <p>People see luxury.</p>
-                <p>I see ambition.</p>
-                <p>I see hard work.</p>
-                <p>I see someone who taught me that dreams are worth chasing.</p>
+              <div className="relative h-44 w-full overflow-hidden">
+                <img
+                  src={rrGhostImg}
+                  alt="Rolls-Royce Ghost"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent" />
+                <div className="absolute top-4 right-4 bg-black/45 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                  <p className="text-white/80 text-[10px] uppercase tracking-widest font-medium">Card · 01</p>
+                </div>
+                <div className="absolute bottom-4 left-5">
+                  <p className="font-display text-2xl text-white font-semibold">The Ghost</p>
+                  <p className="text-accent text-[11px] tracking-wider uppercase mt-0.5 font-medium">Ambition & Grace</p>
+                </div>
+              </div>
+              <div className="p-6 pt-4 space-y-3.5">
+                <div className="flex items-center justify-between">
+                  <RRIcon />
+                </div>
+                <div className="space-y-2.5 text-white/85 text-[14px] leading-relaxed font-light">
+                  <p>They see an elite machine, a symbol of ultimate luxury.</p>
+                  <p className="text-white font-normal">But to me, it's the reflection of your work ethic.</p>
+                  <p>You taught me that greatness isn't given; it is built with quiet grace, relentless drive, and absolute focus.</p>
+                </div>
               </div>
             </motion.div>
           )}
@@ -555,15 +573,32 @@ export function ThingsYouLove({ next }: { next: () => void }) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="glass-strong p-7 w-full max-w-sm"
+              className="glass-strong overflow-hidden w-full max-w-sm flex flex-col rounded-2xl border border-white/10"
             >
-              <DefenderIcon />
-              <p className="text-white/50 text-xs uppercase tracking-widest mt-4">Card · 02</p>
-              <p className="font-display text-3xl text-white mt-1">Defender</p>
-              <div className="mt-4 space-y-2 text-white/85 text-[15px] leading-relaxed">
-                <p>People see strength.</p>
-                <p>I see protection.</p>
-                <p>I see the man who always stood between me and every problem.</p>
+              <div className="relative h-44 w-full overflow-hidden">
+                <img
+                  src={defenderCarImg}
+                  alt="Land Rover Defender"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent" />
+                <div className="absolute top-4 right-4 bg-black/45 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                  <p className="text-white/80 text-[10px] uppercase tracking-widest font-medium">Card · 02</p>
+                </div>
+                <div className="absolute bottom-4 left-5">
+                  <p className="font-display text-2xl text-white font-semibold">The Defender</p>
+                  <p className="text-accent text-[11px] tracking-wider uppercase mt-0.5 font-medium">Protection & Strength</p>
+                </div>
+              </div>
+              <div className="p-6 pt-4 space-y-3.5">
+                <div className="flex items-center justify-between">
+                  <DefenderIcon />
+                </div>
+                <div className="space-y-2.5 text-white/85 text-[14px] leading-relaxed font-light">
+                  <p>They see an adventure vehicle, rugged and built to conquer any path.</p>
+                  <p className="text-white font-normal">But to me, it's a reminder of the shield you've been for us.</p>
+                  <p>Unshakable, unyielding, and always standing between us and any storm. You are our constant defender.</p>
+                </div>
               </div>
             </motion.div>
           )}
@@ -573,15 +608,25 @@ export function ThingsYouLove({ next }: { next: () => void }) {
               initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
               transition={{ duration: 1 }}
-              className="glass-strong p-8 w-full max-w-sm text-center"
-              style={{ boxShadow: "0 0 80px -20px rgba(255,94,125,0.5)" }}
+              className="glass-strong p-8 w-full max-w-sm text-center border border-white/10 rounded-2xl"
+              style={{ boxShadow: "0 0 80px -20px rgba(255,94,125,0.4)" }}
             >
-              <p className="text-white/50 text-xs uppercase tracking-[0.3em]">Together</p>
-              <p className="font-display text-5xl text-white mt-2">Daddy</p>
-              <div className="mt-5 space-y-2 text-white/85 text-base leading-relaxed">
-                <p>RR represents the dream.</p>
-                <p>Defender represents the strength.</p>
-                <p className="text-accent">You are the reason I believe in both.</p>
+              <div className="flex justify-center items-center gap-6 opacity-85 mb-4">
+                <RRIcon />
+                <div className="w-px h-8 bg-white/20" />
+                <DefenderIcon />
+              </div>
+              <div className="space-y-2">
+                <p className="text-white/50 text-[10px] uppercase tracking-[0.3em]">The Legacy</p>
+                <p className="font-display text-3xl text-white font-bold tracking-tight">The Dreamer & The Shield</p>
+              </div>
+              <div className="mt-5 space-y-3 text-white/85 text-[14px] leading-relaxed font-light">
+                <p>The <span className="text-white font-normal">Ghost</span> represents the heights of the dreams you chased.</p>
+                <p>The <span className="text-white font-normal">Defender</span> represents the safety and strength you gave us.</p>
+                <p className="text-accent font-display text-[15px] mt-4 font-normal italic leading-relaxed">
+                  "You showed me how to shoot for the stars, while keeping my feet firmly on the ground."
+                </p>
+                <p className="text-white/60 text-xs mt-4 italic">— Happy Father's Day, Daddy ❤️</p>
               </div>
             </motion.div>
           )}
@@ -613,7 +658,7 @@ function RRIcon() {
     <img
       src={rollsRoyceLogo}
       alt="Rolls-Royce Logo"
-      className="w-20 h-20 object-contain brightness-0 invert opacity-80"
+      className="w-12 h-12 object-contain brightness-0 invert opacity-70"
     />
   );
 }
@@ -622,7 +667,7 @@ function DefenderIcon() {
     <img
       src={landRoverLogo}
       alt="Land Rover Logo"
-      className="w-32 h-12 object-contain brightness-0 invert opacity-80"
+      className="w-24 h-8 object-contain brightness-0 invert opacity-70"
     />
   );
 }
